@@ -1,5 +1,9 @@
 <template>
-  <div class="bg-dark-800 h-screen flex justify-center items-center">
-    <Example />
+  <div>
+    <nuxt-layout name="default">
+      <div>
+        <nuxt-page />
+      </div>
+    </nuxt-layout>
   </div>
 </template>
