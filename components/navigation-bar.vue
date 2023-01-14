@@ -1,4 +1,4 @@
-<script setup lant="ts">
+<script setup lang="ts">
 const routes = reactive([
   {
     name: 'Strona główna',
