@@ -1,0 +1,12 @@
+query welcomeToMyPage {
+  welcomeToMyPage {
+    data {
+      attributes {
+        data {
+          header
+          content
+        }
+      }
+    }
+  }
+}
