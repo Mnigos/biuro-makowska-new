@@ -1,0 +1,12 @@
+query aboutCompany {
+  aboutCompany {
+    data {
+      attributes {
+        data {
+          header
+          content
+        }
+      }
+    }
+  }
+}
