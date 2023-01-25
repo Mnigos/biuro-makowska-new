@@ -37,9 +37,15 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: yarn
+        env:
+          NUXT_API_STRAPI_URL: ${{ secrets.NUXT_API_STRAPI_URL }}
+          NUXT_API_STRAPI_TOKEN: ${{ secrets.NUXT_API_STRAPI_TOKEN }}
 
       - name: Build Application 🧱
         run: yarn build
+        env:
+          NUXT_API_STRAPI_URL: ${{ secrets.NUXT_API_STRAPI_URL }}
+          NUXT_API_STRAPI_TOKEN: ${{ secrets.NUXT_API_STRAPI_TOKEN }}
 
   lint:
     name: 'Lint 🐱'
@@ -70,6 +76,9 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: yarn
+        env:
+          NUXT_API_STRAPI_URL: ${{ secrets.NUXT_API_STRAPI_URL }}
+          NUXT_API_STRAPI_TOKEN: ${{ secrets.NUXT_API_STRAPI_TOKEN }}
 
       - name: Lint 🐱
         run: yarn lint
@@ -103,6 +112,9 @@ jobs:
 
       - name: Install dependencies 👨🏻‍💻
         run: yarn
+        env:
+          NUXT_API_STRAPI_URL: ${{ secrets.NUXT_API_STRAPI_URL }}
+          NUXT_API_STRAPI_TOKEN: ${{ secrets.NUXT_API_STRAPI_TOKEN }}
 
       - name: Run unit tests 🧪
         run: yarn test:coverage
