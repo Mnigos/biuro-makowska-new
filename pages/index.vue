@@ -1,16 +1,13 @@
 <script setup lang="ts">
-import { getAboutCompanyData, getWelcomeToMyPageData } from '~/api'
-
-const email = ref('')
-const phone = ref('')
+import {
+  getAboutCompanyData,
+  getContactData,
+  getWelcomeToMyPageData,
+} from '~/api'
 
 const aboutCompanyData = await getAboutCompanyData()
 const welcomeToMyPageData = await getWelcomeToMyPageData()
-
-onMounted(() => {
-  email.value = 'biuro.makowska@gmail.com'
-  phone.value = '+48 505 107 100'
-})
+const { facebookLink, email, phone } = await getContactData()
 </script>
 
 <template>
@@ -60,10 +57,7 @@ onMounted(() => {
         <template #header>Kontakt</template>
 
         <div class="flex flex-col gap-4 items-start">
-          <contact-link
-            href="https://www.facebook.com/BiuroRachunkoweJoannaMakowska"
-            icon="mdi-facebook"
-          >
+          <contact-link :href="facebookLink ?? ''" icon="mdi-facebook">
             Facebook
           </contact-link>
 
