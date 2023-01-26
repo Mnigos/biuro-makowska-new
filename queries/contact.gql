@@ -1,0 +1,11 @@
+query contact {
+  contact {
+    data {
+      attributes {
+        facebookLink
+        email
+        phone
+      }
+    }
+  }
+}
