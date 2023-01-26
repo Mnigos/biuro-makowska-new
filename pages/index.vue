@@ -27,7 +27,7 @@ const { facebookLink, email, phone } = await getContactData()
 
       <text-card
         class="lg:mt-48 md:w-128"
-        :content="(welcomeToMyPageData.content as string)"
+        :content="welcomeToMyPageData.content"
       >
         <template #header> {{ welcomeToMyPageData.header }} </template>
       </text-card>
@@ -45,7 +45,7 @@ const { facebookLink, email, phone } = await getContactData()
 
         <text-card
           class="lg:w-1/2 lg:mt-20"
-          :content="(aboutCompanyData.content as string)"
+          :content="aboutCompanyData.content"
         >
           <template #header>{{ aboutCompanyData.header }}</template>
         </text-card>
@@ -57,7 +57,7 @@ const { facebookLink, email, phone } = await getContactData()
         <template #header>Kontakt</template>
 
         <div class="flex flex-col gap-4 items-start">
-          <contact-link :href="facebookLink ?? ''" icon="mdi-facebook">
+          <contact-link :href="facebookLink" icon="mdi-facebook">
             Facebook
           </contact-link>
 
